@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web
+spec:
+  selector:
+    matchLabels:
+      run: web
+  template:
+    metadata:
+      labels:
+        run: web
+    spec:
+      containers:
+      - name: web
+        image: gcr.io/google-samples/hello-app:1.0
+        resources:
+          requests:
+            memory: "5Mi"
+            cpu: "0.1"
+          limits:
+            memory: "10Mi"
+            cpu: "0.2"
+        ports:
+        - containerPort: 8000
