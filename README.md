@@ -47,7 +47,7 @@ Em um outro terminal execute o comando abaixo para acompanhar o autoscaler em fu
 
     watch "kubectl get hpa"
 
-Você notará que, ao iniciar o estress na aplicação, o kubernetes automaticamente incrementará o número de Pods de acordo com os padrões configurados no arquivo **hpa.yaml** (Porcentagem de uso de CPU acima de 50% e porcentagem de uso de memória acima de 80%).
+Você notará que, ao iniciar o estress na aplicação, o kubernetes automaticamente incrementará o número de Pods de acordo com os padrões configurados no arquivo **hpa.yaml** (porcentagem de uso de CPU acima de 50% e porcentagem de uso de memória acima de 80%).
 
 Para finalizar o fortio execute:
 
